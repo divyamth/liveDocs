@@ -18,6 +18,7 @@ const Home = async () => {
 
   const roomDocuments = await getDocuments(clerkUser.emailAddresses[0].emailAddress);
 
+
   return (
     <main className='home-container'>
       <Header className='sticky left-0 top-0'>
@@ -29,7 +30,7 @@ const Home = async () => {
         </div>
       </Header>
 
-    {roomDocuments.data.length > 0 ? (
+    {roomDocuments.data.length ? (
       <div className='document-list-container'>
         <div className="document-list-title">
           <h3 className="text-28-semibold">All Documents</h3>
